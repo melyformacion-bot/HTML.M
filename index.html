@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Nuevo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/LOGIN_SPOTIFY.css">
+</head>
+<body>
+  <main class="page">
+    <section class="visual">
+      <nav class="brand">
+        <span class="brand-mark">M</span>
+        <img id="loginM" src="IMG_NETFLIX/logo2.png">
+      </nav>
+
+      <div class="visual-copy">
+        <span class="tag">Nuevo acceso</span>
+        <h1 class="">"HOLA" Una buena actitud y una buena música para empezar el dia...</h1>
+         <h1>Que tengas un fantástico dia..</h1>
+        <p>"La música puede curar las heridas que la medicina no puede tocar."</p>
+      </div>
+
+      <div class="music-card">
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=600&q=80" alt="Concierto">
+        <div>
+          <span>Playlist</span>
+          <strong>Favoritos</strong>
+        </div>
+        <span class="heart">♥</span>
+      </div>
+    </section>
+
+    <section id="authSection" class="auth">
+      <div class="auth-box">
+        <div class="switcher" aria-label="Cambiar formulario">
+          <button id="showLogin" class="active" type="button">Entrar</button>
+          <button id="showRegister" type="button">Registro</button>
+        </div>
+
+        <form id="loginForm" class="form active" novalidate>
+          <header>
+            <span class="tag">Bienvenido</span>
+            <h2>Iniciar sesion</h2>
+            <p>Usa tu usuario creado o entra con <strong>demo@music.com</strong> / <strong>Demo1234</strong>.</p>
+          </header>
+
+          <label>
+            <span>Correo electronico</span>
+            <input id="loginEmail" type="email" placeholder="correo@email.com" autocomplete="email">
+            <small id="loginEmailError"></small>
+          </label>
+
+          <label>
+            <span>Contrasena</span>
+            <div class="password">
+              <input id="loginPassword" type="password" placeholder="Tu contrasena" autocomplete="current-password">
+              <button class="toggle-password" type="button" data-input="loginPassword">Ver</button>
+            </div>
+            <small id="loginPasswordError"></small>
+          </label>
+
+          <label class="remember">
+            <input id="rememberUser" type="checkbox">
+            <span>Recordar correo</span>
+          </label>
+
+          <button class="submit" type="submit">Entrar</button>
+          <p id="loginMessage" class="message" role="status" aria-live="polite"></p>
+        </form>
+
+        <form id="registerForm" class="form" novalidate>
+          <header>
+            <span class="tag">Cuenta nueva</span>
+            <h2>Crear usuario</h2>
+            <p>Los usuarios quedan guardados en este navegador.</p>
+          </header>
+
+          <label>
+            <span>Nombre</span>
+            <input id="registerName" type="text" placeholder="Tu nombre" autocomplete="name">
+            <small id="registerNameError"></small>
+          </label>
+
+          <label>
+            <span>Correo electronico</span>
+            <input id="registerEmail" type="email" placeholder="correo@email.com" autocomplete="email">
+            <small id="registerEmailError"></small>
+          </label>
+
+          <label>
+            <span>Contrasena</span>
+            <div class="password">
+              <input id="registerPassword" type="password" placeholder="Minimo 8 caracteres" autocomplete="new-password">
+              <button class="toggle-password" type="button" data-input="registerPassword">Ver</button>
+            </div>
+            <small id="registerPasswordError"></small>
+          </label>
+
+          <label>
+            <span>Repetir contrasena</span>
+            <div class="password">
+              <input id="confirmPassword" type="password" placeholder="Repite tu contrasena" autocomplete="new-password">
+              <button class="toggle-password" type="button" data-input="confirmPassword">Ver</button>
+            </div>
+            <small id="confirmPasswordError"></small>
+          </label>
+
+          <button class="submit" type="submit">Crear cuenta</button>
+          <p id="registerMessage" class="message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="welcomeSection" class="welcome" hidden>
+      <div class="welcome-card">
+        <span class="success-icon">✓</span>
+        <span class="tag">Sesion iniciada</span>
+        <h2 id="welcomeName">Hola</h2>
+        <p id="welcomeEmail">usuario@email.com</p>
+        <button id="logoutButton" class="submit" type="button">Cerrar sesion</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="JAVASCRIPT/LOGIN_SPOTIFY.js"></script>
+</body>
+</html>
