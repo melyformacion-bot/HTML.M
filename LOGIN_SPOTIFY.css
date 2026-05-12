@@ -30,7 +30,7 @@ body {
     radial-gradient(circle at 88% 70%, rgba(30, 215, 96, 0.12), transparent 34%),
     var(--bg);
 
-    background-image: url(../IMG_NETFLIX/fondo.jfif);
+    background-image: url(IMG_NETFLIX/fondo.jfif);
     background-size: 100% 100%;
 }
 
