@@ -88,7 +88,7 @@ const salir = document.querySelector("#salir");
 salir.addEventListener('click',regresar);
 
 function regresar(){
-   const url = "LOGIN_SPOTIFY.html";
+   const url = "index.html";
 
 setTimeout(() => {
     window.location.href = url;
