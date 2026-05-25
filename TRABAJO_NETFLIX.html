@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Music UI</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://i.scdn.co">
+  <link rel="stylesheet" href="CSS/TRABAJO_NETFLIX.css">
+
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/
+6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-shell">
+
+
+    <main class="spotify-main">
+      <aside class="sidebar">
+        <div class="spotify-logo" aria-label="Spotify">M</div>
+       <button id="homeNav" class="nav-item active" type="button">
+  <span class="nav-icon">⌂</span>
+  Inicio
+</button>
+
+<button id="searchNav" class="nav-item" type="button">
+  <span class="nav-icon">⌕</span>
+  Buscar
+</button>
+
+<button id="libraryNav" class="nav-item" type="button">
+  <span class="nav-icon">▥</span>
+  Tu biblioteca
+</button>
+
+<button id="premiumNav" class="nav-item" type="button">
+  <span class="nav-icon">◎</span>
+  Premium
+</button>
+
+<button id="salir" class="nav-item" type="button">
+  <span class="nav-icon">
+    <i class="fa-regular fa-circle-xmark" style="color: rgb(255, 255, 255);"></i>
+  </span>
+  Salir
+</button>
+
+      </aside>
+
+      <section class="home-view" aria-label="Pantalla principal">
+        
+        <header class="topbar">
+           <img id="logoMely" src="IMG_NETFLIX/logo2.png">
+
+                  <section id="searchPanel" class="search-section">
+                    <input id="searchInput" class="search-input" type="search" placeholder="Buscar canción o artista">
+                    <div id="searchResults" class="search-results"></div>
+                  </section>
+
+              <div class="top-actions" aria-label="Acciones">
+                <button id="notificationButton" type="button" title="Notificaciones">♩</button>
+                <button id="historyButton" type="button" title="Historial">↺</button>
+                <button id="settingsButton" type="button" title="Ajustes">⚙</button>
+              </div>
+            </header>
+
+          <div id="notificationPanel" class="action-panel">
+        <button class="close-panel" type="button">×</button>
+        <h3>Notificaciones</h3>
+        <p><strong>Nueva canción:</strong> Tití Me Preguntó fue añadida.</p>
+        <p><strong>Video disponible:</strong> Puedes abrir el video desde la lista.</p>
+        <p><strong>Playlist:</strong> Tus me gusta tiene 50 canciones.</p>
+      </div>
+
+      <div id="historyPanel" class="action-panel">
+        <button class="close-panel" type="button">×</button>
+        <h3>Historial</h3>
+        <p>Escuchaste: <strong>Tití Me Preguntó</strong></p>
+        <p>Escuchaste: <strong>Efecto</strong></p>
+        <p>Escuchaste: <strong>Ojitos Lindos</strong></p>
+      </div>
+
+      <div id="settingsPanel" class="action-panel">
+        <button class="close-panel" type="button">×</button>
+        <h3>Ajustes</h3>
+        <p><strong>Tema:</strong> Spotify oscuro activado.</p>
+        <p><strong>Color principal:</strong> Verde Spotify.</p>
+        <button id="goOutButton" class="panel-button" type="button">Cerrar sesión</button>
+      </div>
+
+      
+
+        <section class="section-block">
+          <div class="section-title">
+            <h2>Atajos</h2>
+            <button id="toggleList" class="text-button" type="button">Lista de música</button>
+          </div>
+          <div class="shortcut-grid">
+            <button class="shortcut-card" type="button" data-collection="daily">
+              <img src="https://i.scdn.co/image/ab67616d0000b273c6f7af36ecdc3ed6e0a1f169" alt="Mix diario 1">
+              <span>Mix diario 1</span>
+            </button>
+            <button class="shortcut-card" type="button" data-collection="spain">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80" alt="Éxitos España">
+              <span>Éxitos España</span>
+            </button>
+            <button class="shortcut-card favorite" type="button" data-collection="liked">
+              <span class="heart">♥</span>
+              <span>Tus me gusta</span>
+            </button>
+            <button class="shortcut-card" type="button" data-collection="rock">
+              <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=400&q=80" alt="Rock clásico">
+              <span>Rock Clásico</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-title">
+            <h2>Escuchado recientemente</h2>
+            <button class="text-button" type="button">Mostrar todo</button>
+          </div>
+          <div class="album-row">
+            <article class="album-card" data-collection="motomami" tabindex="0" role="button">
+              <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=400&q=80" alt="MOTOMAMI">
+              <strong>MOTOMAMI</strong>
+              <span>ROSALÍA</span>
+            </article>
+            <article class="album-card" data-collection="badbunny" tabindex="0" role="button">
+              <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=400&q=80" alt="Un Verano Sin Ti">
+              <strong>Un Verano Sin Ti</strong>
+              <span>Bad Bunny</span>
+            </article>
+            <article class="album-card" data-collection="afterhours" tabindex="0" role="button">
+              <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?auto=format&fit=crop&w=400&q=80" alt="After Hours">
+              <strong>After Hours</strong>
+              <span>The Weeknd</span>
+            </article>
+            <article class="album-card" data-collection="caribenos" tabindex="0" role="button">
+              <img src="IMG_NETFLIX/caribeños.jfif">
+              <strong>Te Burlaste de Mi</strong>
+              <h4 id="sencillo">Sencillo</h4>
+              <span>Caribeños</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-title">
+            <h2>Hecho para ti</h2>
+            <button class="text-button" type="button">Mostrar todo</button>
+          </div>
+          <div class="mix-row">
+            <article class="mix-card blue">Descubrimiento semanal</article>
+            <article class="mix-card pink">Radar de Novedades</article>
+            <article class="mix-card violet">Mix Pop</article>
+            <article class="mix-card orange">Mix Reggaetón</article>
+          </div>
+        </section>
+      </section>
+
+      <section id="playlistPanel" class="playlist-panel" aria-label="Lista de músicas">
+        <div class="playlist-header">
+          <button id="closeList" class="round-button" type="button" aria-label="Cerrar lista">‹</button>
+          <div class="playlist-cover">♥</div>
+          <div>
+            <p class="eyebrow">Playlist</p>
+            <h2>Lista de canciones</h2>
+            <span> Canciones</span>
+          </div>
+          <button class="play-big" type="button" aria-label="Reproducir">
+            <span class="icon-play" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="download-line">
+          <span>⇩</span>
+          Descargar
+        </div>
+
+        <div id="songList" class="song-list"></div>
+      </section>
+
+      <section id="collectionWindow" class="collection-window" aria-label="Lista de canciones">
+        <div class="collection-card">
+          <button id="closeCollection" class="close-video" type="button" aria-label="Cerrar lista">×</button>
+          <div class="collection-header">
+            <div>
+              <p class="eyebrow">Lista</p>
+              <h2 id="collectionTitle">Mix diario 1</h2>
+              <span id="collectionCount">0 canciones</span>
+            </div>
+            <button id="collectionPlayButton" class="collection-play" type="button" aria-label="Reproducir lista">
+              <span class="icon-play" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div id="collectionSongList" class="collection-song-list"></div>
+        </div>
+      </section>
+
+      <section id="videoWindow" class="video-window" aria-label="Ventana de video">
+        <div class="video-card">
+          <button id="closeVideo" class="close-video" type="button" aria-label="Cerrar video">×</button>
+          <h2 id="videoTitle">Tití Me Preguntó</h2>
+          <p id="videoArtist">Bad Bunny</p>
+          <div class="video-frame"> 
+            <video id="musicVideo" src="" playsinline></video>
+          </div>
+          <div class="video-controls">
+            <button id="videoPlayButton" type="button" aria-label="Reproducir video"></button>
+            <button id="fullscreenButton" type="button" title="Pantalla completa" aria-label="Pantalla completa"></button>
+            <div id="videoProgress" class="progress"><span></span></div>
+            <time id="duration">4:03</time>
+          </div>
+          <h3>Letra</h3>
+          <p id="lyrics" class="lyrics"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="player-footer">
+      <div class="now-playing">
+        <img id="footerCover" src="IMG_NETFLIX/CAMILA_VIDA.jpg">
+        <div>
+          <strong id="footerTitle">Tití Me Preguntó</strong>
+          <span id="footerArtist">Bad Bunny</span>
+        </div>
+      </div>
+      <div class="player-center">
+        <div class="player-buttons">
+          <button type="button">♥</button>
+          <button type="button">⤨</button>
+          <button id="previousButton" type="button">◀</button>
+          <button id="footerPlayButton" class="play-small" type="button" aria-label="Reproducir">
+            <span class="icon-play" aria-hidden="true"></span>
+          </button>
+          <button id="nextButton" type="button">▶</button>
+          <button type="button">↻</button>
+          <button type="button"></button>
+        </div>
+        <div class="timeline">
+           <span id="currentTime">0:00</span>
+          <div id="footerProgress" class="bar"><span></span></div>
+          <span id="footerDuration">4:03</span>
+        </div>
+      </div>
+      <div class="footer-tools">
+        <button type="button">≡</button>
+        <button type="button">▣</button>
+        <button type="button">▰</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="JAVASCRIPT/TRABAJO_NETFLIX.js"></script>
+</body>
+</html>
